@@ -1,0 +1,33 @@
+.lorem {
+    font-size: 60px;
+    color: plum;
+}
+.button {
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    border-width: 0.3px;
+    border-color: rgb(78, 35, 35);
+    background-color: rgb(199, 241, 179);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(56, 14, 76);
+    transition: backround-color 0.3s ease;
+}
+a{
+    text-decoration: none;
+}
+.button:hover{
+    background-color: rgb(160, 202, 140);
+}
+
+.button:active{
+    background-color: rgb(56, 14, 76);
+    color: rgb(199, 241, 179);
+}
+

@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#word-display {
+    font-size: 2em;
+    letter-spacing: 5px;
+    margin: 20px 0;
+}
+
+#alphabet {
+    margin: 20px 0;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#reset-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.correct {
+    background-color: #4CAF50 !important;
+}
+
+.wrong {
+    background-color: #f44336 !important;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
