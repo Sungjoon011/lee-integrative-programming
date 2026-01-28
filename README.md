@@ -3,21 +3,26 @@ Each repository must include a README.md file with the following sections:
 
 🔹 Project Title
 
-Name of your landing page project.
+Name of your landing page project. 
+= FutureTech
 
 🔹 Description
 
 Explain:
 
-What the landing page is about
+What the landing page is about 
+= About Designing the Future
 
-Who it is for
+Who it is for 
+= People who are intrested in Designing For Future Uses
 
-What problem it solves or purpose it serves
+What problem it solves or purpose it serves 
+= It serves people who has creativity in mind
 
 (3–5 sentences only)
 
-🔹 Technologies Used
+🔹 Technologies Used 
+= HTML5, CSS
 
 Example:
 
@@ -29,7 +34,8 @@ JavaScript (optional)
 
 🔹 Features
 
-List at least 3 features of your landing page.
+List at least 3 features of your landing page. 
+= Clean UI Design, Innovative, Login/Signup
 
 Example:
 
@@ -43,7 +49,8 @@ Clean UI design
 
 Answer honestly:
 
-Did you use AI tools? (Yes / No)
+Did you use AI tools? (Yes / No) 
+= Chatgpt, It helped me create images and align the text and generate a simple css layout with a diagonal line.
 
 If YES, specify:
 
@@ -65,9 +72,11 @@ If NO, state:
 
 Answer briefly:
 
-What did you learn from this activity?
+What did you learn from this activity? 
+= AI can help solving your problem if you have a concrete prompt. Using VScode to update your github using the vscode terminal.
 
-What was the most challenging part?
+What was the most challenging part? 
+= Making the diagonal and prompting to make a futuristic image.
 
 (2–3 sentences)
 
@@ -93,5 +102,6 @@ Consistent UI styling across pages
 AI Assistance Disclosure (if applicable)
 
 If AI helped with form layout or styling, mention it honestly.
+
 
 
