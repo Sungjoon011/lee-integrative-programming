@@ -6,6 +6,10 @@
     font-family: "Segoe UI", sans-serif;
 }
 
+html, body {
+    overflow: hidden;
+}
+
 /* BODY */
 body {
     background: #050510;
