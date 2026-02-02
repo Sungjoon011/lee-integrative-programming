@@ -1,107 +1,71 @@
 ﻿# lee-integrative-programming
-Each repository must include a README.md file with the following sections:
 
-🔹 Project Title
+ ACTVITY 1 January 21,2026
 
-Name of your landing page project. 
-= FutureTech
+🔹 Activity name (eg Landing Page).
 
-🔹 Description
+    Integrative Programming – Landing Page Project // Futuretech
 
-Explain:
+🔹 Description Explain: What the landing page is about Who it is for What problem it solves or purpose it serves (3–5 sentences only)
 
-What the landing page is about 
-= About Designing the Future
+    My Landing Page is about people in the current generation to design a for future uses like AI website, AI programming tool etc,. it serves people who have a creativity and want to create their own website with the help of AI and related projects in this page.
 
-Who it is for 
-= People who are intrested in Designing For Future Uses
+🔹 Technologies Used Example: HTML5 CSS3 JavaScript (optional)
+ 
+     HTML, CSS
 
-What problem it solves or purpose it serves 
-= It serves people who has creativity in mind
+🔹 Features List at least 3 features of your landing page.
 
-(3–5 sentences only)
+    Clean UI Design, Innovative, Clear Call to Actions
 
-🔹 Technologies Used 
-= HTML5, CSS
-
-Example:
-
-HTML5
-
-CSS3
-
-JavaScript (optional)
-
-🔹 Features
-
-List at least 3 features of your landing page. 
-= Clean UI Design, Innovative, Login/Signup
-
-Example:
-
-Responsive layout
-
-Call-to-action button
-
-Clean UI design
+Example: Responsive layout Call-to-action button Clean UI design
 
 🔹 AI Assistance Disclosure (Required)
+Answer honestly: Did you use AI tools? (Yes / No)
 
-Answer honestly:
+    Yes, I used Chatgpt, It helped me create images and align the text and generate a simple css layout with a diagonal line.
 
-Did you use AI tools? (Yes / No) 
-= Chatgpt, It helped me create images and align the text and generate a simple css layout with a diagonal line.
+If NO, state: “This project was created without the use of AI tools.”
+🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
 
-If YES, specify:
+    AI can help solving your problem if you have a concrete prompt. Using VScode to update your github using the vscode terminal. The most challenging part was making the diagonal and prompting to make a futuristic image.
 
-What AI tool you used
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-What it helped you with
-
-(e.g., layout ideas, CSS styling, text content, debugging)
-
-Example:
-
-“I used ChatGPT to help generate CSS layout ideas and improve wording for the hero section. All code was reviewed and modified by me.”
-
-If NO, state:
-
-“This project was created without the use of AI tools.”
-
-🔹 Learning Reflection (Short)
-
-Answer briefly:
-
-What did you learn from this activity? 
-= AI can help solving your problem if you have a concrete prompt. Using VScode to update your github using the vscode terminal.
-
-What was the most challenging part? 
-= Making the diagonal and prompting to make a futuristic image.
-
-(2–3 sentences)
+ACTIVITY 2
 
 
-Update your README.md by adding:
+🔹 Activity name (eg Login and Signup page linking)
 
-Pages Added
+    Integrative Programming - Add Login + Signup Pages (Linking Activity)
 
-List the pages you added and what each page is for:
+🔹 Description Explain: 
 
-login.html – login UI page
+    Creating a Login and Signup pages with only one CSS, and connect them to the main and each other.
 
-signup.html – signup UI page
+🔹 Features List at least 3 features of your signin / login if any.
 
-New Features (update your Features list)
+    Unique Account, Clean UI, Privacy and Policy.
 
-Add at least 1–2 new features, example:
+Example: Responsive layout Call-to-action button Clean UI design
 
-Multi-page navigation (Landing → Login → Signup)
+🔹 AI Assistance Disclosure (Required)
+Answer honestly: Did you use AI tools? (Yes / No)
 
-Consistent UI styling across pages
+    I used ChatGPT to create me a Login and Signup Pages with a bg image that is blurry.
 
-AI Assistance Disclosure (if applicable)
+If YES, specify: What AI tool you used What it helped you with (e.g., layout ideas, CSS styling, text content, debugging)
 
-If AI helped with form layout or styling, mention it honestly.
+Example: “I used ChatGPT to help generate CSS layout ideas and improve wording for the hero section.
+All code was reviewed and modified by me.”
 
+If NO, state: “This project was created without the use of AI tools.”
+🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
 
+    I learn in this activity is about connecting 3 different pages to navigate a certain page.
 
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Activity 3
+
+----------------------------------------------------------------------------------------------------------------------------------------------
