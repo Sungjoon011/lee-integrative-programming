@@ -80,6 +80,7 @@ body {
     font-size: 1.6rem;
     letter-spacing: 2px;
     color: #8be9fd;
+    cursor: pointer;
 }
 
 .navbar ul {
@@ -364,4 +365,272 @@ body::before {
 
 .signup .auth-card {
   border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+/* =========================
+   FUTURETECH PROFILE PAGE
+   (ISOLATED STYLES)
+========================= */
+
+.ft-profile-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #3b0a6d, #05010d 60%);
+  color: #eae6ff;
+  font-family: "Segoe UI", sans-serif;
+  padding: 120px 60px 60px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.ft-profile-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+.ft-profile-card {
+  background: linear-gradient(
+    180deg,
+    rgba(115, 80, 255, 0.25),
+    rgba(20, 10, 40, 0.9)
+  );
+  border-radius: 22px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.ft-profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #8be9fd, #7c4dff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #050510;
+}
+
+.ft-profile-name {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.ft-profile-email,
+.ft-profile-address {
+  font-size: 0.9rem;
+  color: #c7c3ff;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+.ft-profile-info {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 15, 70, 0.95),
+    rgba(10, 5, 30, 0.95)
+  );
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.ft-profile-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  color: #8be9fd;
+}
+
+.ft-profile-info p {
+  line-height: 1.8;
+  color: #ddd9ff;
+  max-width: 720px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .ft-profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ft-profile-page {
+    padding: 100px 30px 40px;
+  }
+}
+
+.navbar-profile {
+  background:black;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(139, 233, 253, 0.18);
+}
+
+/* Optional polish */
+.navbar-profile a {
+  color: #e6e9ff;
+}
+
+.navbar-profile a:hover {
+  color: #8be9fd;
+}
+
+/* =========================
+   FUTURETECH SETTINGS PAGE
+========================= */
+
+.ft-settings-page * {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.ft-settings-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #3b0a6d, #05010d 60%);
+  color: #eae6ff;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+.ft-settings-page {
+  padding: 100px 60px 80px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.ft-settings-header {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.ft-settings-back {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: #9fdfff;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.ft-settings-back:hover {
+  color: #8be9fd;
+  transform: translateX(-4px);
+}
+
+.ft-settings-header h2 {
+  font-size: 2.4rem;
+  color: #8be9fd;
+  margin-bottom: 10px;
+}
+
+.ft-settings-header p {
+  color: #c7c3ff;
+  font-size: 1rem;
+}
+
+/* =========================
+   SETTINGS CARD
+========================= */
+.ft-settings-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 15, 70, 0.95),
+    rgba(10, 5, 30, 0.95)
+  );
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   FORM GROUPS
+========================= */
+.ft-settings-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+
+.ft-settings-group label {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #e6e9ff;
+}
+
+.ft-settings-group input,
+.ft-settings-group select {
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  padding: 0 16px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  outline: none;
+}
+
+.ft-settings-group input::placeholder {
+  color: #9fa4ff;
+}
+
+.ft-settings-group small {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #9fa4ff;
+  line-height: 1.4;
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+.ft-settings-save-btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 52px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #050510;
+  background: linear-gradient(135deg, #8be9fd, #bd93f9);
+  box-shadow: 0 0 26px rgba(139, 233, 253, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.Setting {
+    text-decoration: none;
+}
+
+.ft-settings-save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 36px rgba(139, 233, 253, 0.6);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .ft-settings-page {
+    padding: 80px 30px 60px;
+  }
+
+  .ft-settings-card {
+    padding: 30px;
+  }
 }
