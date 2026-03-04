@@ -68,4 +68,81 @@ If NO, state: “This project was created without the use of AI tools.”
 
 Activity 3
 
+
+🔹 Activity name (eg Login and Signup page linking)
+
+    Profile and Settings Page
+
+🔹 Description Explain: 
+
+    Creating a Profile and Settings page where login will direct it to the Profile Page
+
+🔹 Features List at least 3 features of your Profile / Settings if any.
+
+    Display Account, Easy Navigation, Settings
+
+Example: Responsive layout Call-to-action button Clean UI design
+
+🔹 AI Assistance Disclosure (Required)
+Answer honestly: Did you use AI tools? (Yes / No)
+
+    I used ChatGPT to create me a Profile page related to my Index Page Design to fix with CSS Styling.
+
+If YES, specify: What AI tool you used What it helped you with (e.g., layout ideas, CSS styling, text content, debugging)
+
+Example: “I used ChatGPT to help generate CSS layout ideas and improve wording for the hero section.
+All code was reviewed and modified by me.”
+
+If NO, state: “This project was created without the use of AI tools.”
+🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
+
+    I learn in this activity is about creating your own Profile Page and Settings where there will be a Logout Button.
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Activity 4
+
+🔹 Activity name (eg Login and Signup page linking)
+
+    Adding Validation Rule
+
+🔹 Description Explain: 
+
+    Creating a Validation Rule to make the user required to input their Details to Login or Signup
+
+🔹 Features List at least 3 features of your Profile / Settings if any.
+
+    Unique Account, Signup Password and Confirm Password Match, LocalStorage.
+
+Example: Responsive layout Call-to-action button Clean UI design
+
+🔹 AI Assistance Disclosure (Required)
+Answer honestly: Did you use AI tools? (Yes / No)
+
+    I used ChatGPT to create me a JS script where the Password and Confirm Password must be a Match before logging in.
+
+If YES, specify: What AI tool you used What it helped you with (e.g., layout ideas, CSS styling, text content, debugging)
+
+Example: “I used ChatGPT to help generate CSS layout ideas and improve wording for the hero section.
+All code was reviewed and modified by me.”
+
+If NO, state: “This project was created without the use of AI tools.”
+🔹 Learning Reflection (Short) Answer briefly: What did you learn from this activity? What was the most challenging part? (2–3 sentences)
+
+    I learn in this activity is about Inputting your Information is required to do and how to do it with the JS script. And Using Local Storage to store an account.
+    
+   
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Activity 5
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Activity 6
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Activity 7
+
 ----------------------------------------------------------------------------------------------------------------------------------------------
