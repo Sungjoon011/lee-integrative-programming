@@ -634,3 +634,17 @@ body::before {
     padding: 30px;
   }
 }
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+#loginForm{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}

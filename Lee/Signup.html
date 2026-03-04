@@ -8,28 +8,44 @@
 <body class="auth-page">
 
   <div class="container signup">
-
     <div class="side-image"></div>
 
     <div class="auth-card">
-      <input type="text" placeholder="Username">
-      <input type="email" placeholder="Email">
-      <input type="password" placeholder="Password">
-      <input type="password" placeholder="Confirm Password">
 
-      <!-- Agree to policy -->
-      <div class="options">
-        <label class="remember">
-          <input type="checkbox">
-          <span>I agree to the policy</span>
-        </label>
-      </div>
+      <!-- FORM STARTS HERE -->
+      <form id="registerForm">
 
-      <a href="Profile.html"><button class="primary-btn">Sign Up</button></a>
-      <a href="Login.html"><button class="link-btn">Already have an account? Log in</button></a>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+        <p id="error" style="color:red;"></p>
+
+        <!-- Agree to policy -->
+        <div class="options">
+          <label class="remember">
+            <input type="checkbox" required>
+            <span>I agree to the policy</span>
+          </label>
+        </div>
+
+        <!-- Button must be inside form and type submit -->
+        <button type="submit" class="primary-btn">Sign Up</button>
+
+      </form>
+      <!-- FORM ENDS HERE -->
+
+      <a href="Login.html">
+        <button type="button" class="link-btn">
+          Already have an account? Log in
+        </button>
+      </a>
+
     </div>
-
   </div>
 
+<script src="JS.js"></script>
 </body>
 </html>

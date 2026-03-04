@@ -10,23 +10,35 @@
   <div class="container login">
 
     <div class="auth-card">
-      <input type="text" placeholder="Username">
-      <input type="password" placeholder="Password">
 
-      <div class="options">
-        <label class="remember">
-          <input type="checkbox">
-          <span>Remember me</span>
-        </label>
-      </div>
+      <form id="loginForm">
 
-      <a href="Profile.html"><button class="primary-btn">Log In</button></a>
-      <a href="Signup.html"><button class="link-btn">Don’t have an account? Click here</button></a>
+        <input type="text" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+
+        <div class="options">
+          <label class="remember">
+            <input type="checkbox">
+            <span>Remember me</span>
+          </label>
+        </div>
+
+        <!-- Proper submit button -->
+        <button type="submit" class="primary-btn">Log In</button>
+
+      </form>
+
+      <!-- Link styled as button -->
+      <a href="Signup.html" class="link-btn">
+        Don’t have an account? Click here
+      </a>
+
     </div>
 
     <div class="side-image"></div>
 
   </div>
 
+<script src="JS.js"></script>
 </body>
 </html>

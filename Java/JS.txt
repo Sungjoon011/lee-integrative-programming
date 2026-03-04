@@ -1,0 +1,26 @@
+let age = prompt("Enter First Number:");
+let age2 = prompt("Enter Second Number:");
+
+let resultadd = Number(age) + Number(age2);
+let resultsub = Number(age) - Number(age2);
+let resultmult = Number(age) * Number(age2);
+let resultdid = Number(age) % Number(age2);
+
+console.log(resultadd);
+console.log(resultsub);
+console.log(resultmult);
+console.log(resultdid);
+
+
+
+let name = prompt("Enter your name:");
+let agee = prompt("Enter your age:");
+let school = prompt("Enter your school:");
+
+if (name === null|| name.trim() === "" && age === null || age.trim() === "" && school === null || school.trim() === "") {
+    console.log("No Information Entered");
+} else {
+    console.log("Welcome", name);
+    console.log("You are", agee, "Years Old");
+    console.log("You are Studying in", school);
+}
