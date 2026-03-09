@@ -98,3 +98,25 @@ function showMessage(message) {
 
     errorBox.textContent = message;
 }
+// ================= login Show Password =================
+function toggleLoginPassword() {
+  const password = document.getElementById("loginPassword");
+
+  if (password.type === "password") {
+    password.type = "text";
+  } else {
+    password.type = "password";
+  }
+}
+// =================  Show Password =================
+function toggleBothPasswords() {
+  const password = document.getElementById("password");
+  const confirm = document.getElementById("confirmPassword");
+
+  // Check if currently password type is "password"
+  const isPassword = password.type === "password";
+
+  // Toggle both fields at the same time
+  password.type = isPassword ? "text" : "password";
+  confirm.type = isPassword ? "text" : "password";
+}

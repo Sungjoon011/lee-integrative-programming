@@ -234,7 +234,7 @@ footer {
 
 body {
   height: 100vh;
-  background: url("bg.png") center/cover no-repeat;
+  background: url("BG.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,7 +267,7 @@ body::before {
 /* Side image */
 .side-image {
   width: 55%;
-  background: url("space.png") center/cover no-repeat;
+  background: url("Space.png") center/cover no-repeat;
   position: relative;
 }
 
@@ -294,7 +294,9 @@ body::before {
 }
 
 /* Inputs */
-.auth-card input {
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
   height: 50px;
   border-radius: 12px;
   border: none;
@@ -303,7 +305,6 @@ body::before {
   background: rgba(255,255,255,0.1);
   color: #fff;
   font-size: 15px;
-  box-shadow: inset 0 0 12px rgba(0,180,255,0.25);
 }
 
 /* Remember me */
@@ -647,4 +648,23 @@ body::before {
   flex-direction: column;
   gap: 15px;
   width: 100%;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #9fdfff;
 }
