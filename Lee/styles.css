@@ -668,3 +668,109 @@ body::before {
   font-size: 16px;
   color: #9fdfff;
 }
+/* =========================
+   API PAGE FULL LAYOUT
+========================= */
+
+.ft-api-page{
+  min-height:100vh;
+  padding:120px 80px;
+
+  background: radial-gradient(circle at top right,#3b0a6d,#05010d 60%);
+}
+
+/* Title */
+
+.page-title{
+  font-size:2.6rem;
+  color:#8be9fd;
+  text-align:center;
+
+  text-shadow:0 0 10px #8be9fd;
+}
+
+.page-subtitle{
+  text-align:center;
+  color:#c7c3ff;
+  margin-bottom:60px;
+}
+
+/* GRID */
+
+.api-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+/* CARD */
+
+.api-section{
+  padding:40px;
+
+  border-radius:20px;
+
+  background: rgba(20,10,40,0.6);
+
+  backdrop-filter: blur(16px);
+
+  border:1px solid rgba(139,233,253,0.2);
+
+  box-shadow:0 15px 60px rgba(0,0,0,0.5);
+}
+
+/* HEADINGS */
+
+.api-section h3{
+  margin-bottom:20px;
+  color:#8be9fd;
+}
+
+/* BUTTON */
+
+.api-section button{
+  padding:10px 22px;
+  border-radius:30px;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+
+  background: linear-gradient(135deg,#8be9fd,#bd93f9);
+
+  box-shadow:0 0 15px rgba(139,233,253,0.5);
+
+  transition:all .3s ease;
+}
+
+.api-section button:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px #bd93f9;
+}
+
+/* INPUT */
+
+.planet-search{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.planet-search input{
+  flex:1;
+  height:42px;
+  border-radius:10px;
+  border:none;
+  padding:0 12px;
+
+  background:rgba(255,255,255,0.08);
+  color:white;
+}
+
+/* RESULTS */
+
+#jokeBox,
+#planetResult{
+  margin-top:20px;
+  color:#ddd9ff;
+  line-height:1.6;
+}

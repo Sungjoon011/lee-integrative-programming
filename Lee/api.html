@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FutureTech Discovery Hub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-profile">
+  <h1 class="logo"><a href="Profile.html">FutureTech</a></h1>
+</nav>
+
+<div class="ft-api-page">
+
+<h2 class="page-title">🚀 FutureTech Discovery Hub</h2>
+<p class="page-subtitle">Explore space data and generate AI humor.</p>
+
+<div class="api-grid">
+
+  <!-- JOKE SECTION -->
+  <div class="api-section">
+
+    <h3>😂 Random Tech Joke</h3>
+
+    <button onclick="getJoke()">Generate Joke</button>
+
+    <div id="jokeBox"></div>
+
+  </div>
+
+
+  <!-- PLANET SECTION -->
+  <div class="api-section">
+
+    <h3>🪐 Planet Explorer</h3>
+
+    <div class="planet-search">
+      <input type="text" id="planetInput" placeholder="Enter planet name">
+      <button onclick="searchPlanet()">Search</button>
+    </div>
+
+    <div id="planetResult"></div>
+
+  </div>
+
+</div>
+
+</div>
+
+<script src="JS.js"></script>
+
+</body>
+</html>
