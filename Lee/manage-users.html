@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Manage Users</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="overflow-y: auto;">
+    <nav class="navbar navbar-profile">
+        <h1 class="logo"><a href="admin.html">FutureTech</a></h1>
+        <ul><li><a href="#" id="navUserName">Admin</a></li></ul>
+    </nav>
+    <div class="ft-api-page">
+        <h2 class="page-title">System Records</h2>
+        <div class="api-grid">
+            <div class="api-section">
+                <h3>Add New User</h3>
+                <form id="adminAddForm">
+                    <div class="planet-search"><input type="text" id="adminName" placeholder="Name" required></div>
+                    <div class="planet-search"><input type="email" id="adminEmail" placeholder="Email (Required)" required></div>
+                    <button type="submit" style="width:100%;">Add Entry</button>
+                </form>
+            </div>
+            <div class="api-section">
+                <h3>Current Database</h3>
+                <table class="admin-table">
+                    <thead><tr><th>#</th><th>Name</th><th>Email</th><th>Action</th></tr></thead>
+                    <tbody id="userTableBody">
+                        <tr><td>1</td><td>Ana</td><td>ana@email.com</td><td><button class="delete-btn">Delete</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="JS.js"></script>
+</body>
+</html>

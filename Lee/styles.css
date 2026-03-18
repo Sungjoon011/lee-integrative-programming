@@ -774,3 +774,381 @@ body::before {
   color:#ddd9ff;
   line-height:1.6;
 }
+
+/* =========================
+   ADMIN & TABLE STYLES
+========================= */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #ddd9ff;
+}
+
+.admin-table th {
+    border-bottom: 2px solid #8be9fd;
+    padding: 12px;
+    text-align: left;
+    color: #8be9fd;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(139, 233, 253, 0.1);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #ff5555, #ff4444) !important;
+    padding: 6px 15px !important;
+    font-size: 0.8rem !important;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 85, 85, 0.3);
+}
+
+.delete-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 85, 85, 0.5);
+}
+/* ADMIN & MANAGEMENT STYLES */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #ddd9ff;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-table th {
+    background: rgba(139, 233, 253, 0.1);
+    border-bottom: 2px solid #8be9fd;
+    padding: 12px;
+    text-align: left;
+    color: #8be9fd;
+}
+
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(139, 233, 253, 0.1);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #ff5555, #ff4444) !important;
+    padding: 6px 15px !important;
+    font-size: 0.8rem !important;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 85, 85, 0.5);
+}
+
+/* CLEAN & SIMPLE NAVBAR NAME */
+#navUserName {
+    color: #8be9fd; /* Theme accent color */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+#navUserName:hover {
+    background: rgba(139, 233, 253, 0.1); /* Subtle glow on hover */
+    color: #fff;
+}
+
+/* --- ISOLATED DISCOVERY STYLES --- */
+#apiDiscoveryPage {
+    height: 100vh;
+    overflow: hidden; /* Stops the whole page from scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+#apiDiscoveryPage .api-main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 90vh;
+}
+
+#apiDiscoveryPage .hub-header {
+    text-align: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+/* THE BIG FIXED BOX */
+#apiDiscoveryPage .fixed-discovery-box {
+    width: 90%;
+    max-width: 1100px;
+    height: 70vh; /* Fixed height: won't grow or shrink */
+    background: rgba(15, 15, 25, 0.95);
+    border: 1px solid rgba(139, 233, 253, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stack search on results */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+/* SEARCH AREA */
+#apiDiscoveryPage .search-controls {
+    flex-shrink: 0;
+    margin-bottom: 25px;
+}
+
+#apiDiscoveryPage .search-bar-inner {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#apiDiscoveryPage .search-bar-inner input {
+    flex: 1;
+    padding: 15px;
+    background: #050505;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+/* THE RESULTS SCROLL AREA (The only part that moves) */
+#apiDiscoveryPage .results-scroll-area {
+    flex-grow: 1;
+    overflow-y: auto; /* Internal scroll only */
+    padding-right: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* Individual Result Cards */
+#apiDiscoveryPage .results-scroll-area div {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(139, 233, 253, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Custom Techy Scrollbar */
+#apiDiscoveryPage .results-scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+#apiDiscoveryPage .results-scroll-area::-webkit-scrollbar-thumb {
+    background: #8be9fd;
+    border-radius: 10px;
+}
+/* --- ISOLATED API PAGE STYLES --- */
+#api-page-fixed {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden; 
+    background: radial-gradient(circle at top right, #3b0a6d, #05010d 60%) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+#api-page-fixed .api-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#api-page-fixed .api-title h1 {
+    color: #fff;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
+}
+
+/* --- THE FIXED BOX (STRICT & BIG) --- */
+#api-page-fixed .fixed-box {
+    width: 950px;
+    height: 600px;
+    background: rgba(10, 5, 20, 0.9);
+    border: 1px solid rgba(139, 233, 253, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* --- NEON SEARCH DESIGN --- */
+#api-page-fixed .search-header {
+    flex-shrink: 0;
+    margin-bottom: 25px;
+}
+
+#api-page-fixed .search-label {
+    font-size: 0.75rem;
+    color: #8be9fd;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+#api-page-fixed .search-design-wrapper {
+    display: flex;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #3b0a6d;
+}
+
+#api-page-fixed .search-design-wrapper input {
+    flex: 1;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    padding: 15px;
+    color: white;
+    outline: none;
+}
+
+#api-page-fixed .search-design-wrapper input:focus {
+    border-color: #8be9fd;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#api-page-fixed .neon-search-btn {
+    background: #3b0a6d;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#api-page-fixed .neon-search-btn:hover {
+    background: #8be9fd;
+    color: #05010d;
+    border-color: #8be9fd;
+    box-shadow: 0 0 20px rgba(139, 233, 253, 0.6);
+}
+
+/* --- RESULTS SCROLL AREA --- */
+#api-page-fixed .scroll-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+.placeholder-text {
+    text-align: center;
+    color: #444;
+    margin-top: 100px;
+    font-style: italic;
+}
+
+/* Individual Results Cards */
+#api-page-fixed .scroll-area div {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(139, 233, 253, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#api-page-fixed .scroll-area div:hover {
+    border-color: #3b0a6d;
+    background: rgba(59, 10, 109, 0.1);
+}
+
+/* Custom Purple/Cyan Scrollbar */
+#api-page-fixed .scroll-area::-webkit-scrollbar {
+    width: 5px;
+}
+#api-page-fixed .scroll-area::-webkit-scrollbar-thumb {
+    background: #3b0a6d;
+    border-radius: 10px;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(139, 233, 253, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Forces Read Intel Left and Save Intel Right */
+.card-footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 10px;
+}
+
+.intel-link { color: #ff79c6; text-decoration: none; font-size: 0.8rem; font-weight: bold; }
+.save-intel-btn {
+    background: #3b0a6d;
+    color: white;
+    border: 1px solid #8be9fd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+/* --- SAVED ITEMS GRID (STANDING BOXES) --- */
+#savedList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Creates the grid */
+    gap: 20px;
+    padding: 10px;
+}
+
+.standing-box {
+    width: 180px;      /* Standing width */
+    height: 240px;     /* Rectangular standing height */
+    background: rgba(59, 10, 109, 0.2);
+    border: 1px solid #3b0a6d;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.standing-box:hover {
+    border-color: #8be9fd;
+    transform: translateY(-5px);
+    background: rgba(59, 10, 109, 0.4);
+}
+
+.box-icon { font-size: 2rem; margin-bottom: 10px; }
+.standing-box h4 { font-size: 0.9rem; color: #8be9fd; margin-bottom: 10px; }
+.standing-box small { color: #666; font-size: 0.7rem; margin-bottom: 15px; }
+
+.del-btn {
+    background: #ff4444;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}

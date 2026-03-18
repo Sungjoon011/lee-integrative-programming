@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discovery Hub | FutureTech</title>
+    <title>Saved Archives | FutureTech</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="api-page-fixed">
@@ -20,22 +20,16 @@
 
     <div class="api-main-content">
         <header class="api-title">
-            <h1>Discovery Hub</h1>
-            <p>Intelligence Retrieval System</p>
+            <h1>Local Archives</h1>
+            <p>Pinned intelligence reports stored in localStorage.</p>
         </header>
 
         <div class="fixed-box">
-            <div class="search-header">
-                <span class="search-label">🔍 REVOLUTION SEARCH</span>
-                <div class="search-design-wrapper">
-                    <input type="text" id="newsQuery" placeholder="Enter query (AI, Robots, Tech)...">
-                    <button onclick="fetchTechNews()" class="neon-search-btn">SEARCH</button>
+            <div id="savedList" class="scroll-area">
                 </div>
-            </div>
-
-            <div id="newsList" class="scroll-area">
-                <p class="placeholder-text">System Ready for Query...</p>
-            </div>
+            <button onclick="clearAllSaved()" style="margin-top: 15px; background: #ff4444; border: none; color: white; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%;">
+                WIPE ALL ARCHIVES
+            </button>
         </div>
     </div>
 

@@ -1,186 +1,183 @@
-// ================= LOGIN =================
-const loginForm = document.getElementById("loginForm");
+/**
+ * FutureTech Unified Script
+ * Final Version: API + Far-Right Save Button + Standing Box Grid
+ */
 
-if (loginForm) {
-
-    const usernameInput = loginForm.querySelector("input[type='text']");
-    const passwordInput = loginForm.querySelector("input[type='password']");
-    const rememberCheckbox = loginForm.querySelector("input[type='checkbox']");
-
-    const rememberedUser = localStorage.getItem("rememberedUsername");
-
-    if (rememberedUser) {
-        usernameInput.value = rememberedUser;
-        rememberCheckbox.checked = true;
+window.addEventListener("DOMContentLoaded", () => {
+    // 1. Navbar Username Persistence
+    const loggedInName = localStorage.getItem("currentUser");
+    const navNameLink = document.getElementById("navUserName");
+    if (navNameLink) {
+        navNameLink.textContent = loggedInName || "Jason";
     }
 
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+    // 2. Load Saved Items only if the savedList container exists (Saved.html)
+    if (document.getElementById("savedList")) {
+        displaySavedItems();
+    }
+});
 
-        const storedUser = JSON.parse(localStorage.getItem("user"));
+// ==========================================
+// 1. DISCOVERY SEARCH LOGIC (api.html)
+// ==========================================
+async function fetchTechNews() {
+    const query = document.getElementById("newsQuery").value.trim();
+    const listContainer = document.getElementById("newsList");
 
-        if (!storedUser) {
-            showMessage("No user found. Please sign up first.");
+    if (!query) return alert("Please enter an intelligence query.");
+
+    listContainer.innerHTML = "<p style='text-align:center; color:#8be9fd;'>📡 Querying Global Archives...</p>";
+
+    const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${query}+robotics&format=json&origin=*`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const results = data.query.search;
+        listContainer.innerHTML = ""; // Clear loader
+
+        if (results.length === 0) {
+            listContainer.innerHTML = "<p style='text-align:center;'>No matching records found.</p>";
             return;
         }
 
-        if (
-            usernameInput.value === storedUser.username &&
-            passwordInput.value === storedUser.password
-        ) {
-
-            if (rememberCheckbox.checked) {
-                localStorage.setItem("rememberedUsername", usernameInput.value);
-            } else {
-                localStorage.removeItem("rememberedUsername");
-            }
-
-            // Redirect directly
-            window.location.href = "Profile.html";
-
-        } else {
-            showMessage("Invalid username or password.");
-        }
-    });
+        results.forEach(item => {
+            const cleanSnippet = item.snippet.replace(/<\/?[^>]+(>|$)/g, "");
+            const card = document.createElement("div");
+            card.className = "result-card";
+            
+            // Flexbox "justify-content: space-between" in CSS will push the button to the far right
+            card.innerHTML = `
+                <h4 style="color:#8be9fd; margin-bottom:8px;">${item.title}</h4>
+                <p style="font-size:0.85rem; color:#ccc; line-height:1.4;">${cleanSnippet}...</p>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:15px; border-top:1px solid rgba(255,255,255,0.05); padding-top:10px;">
+                    <a href="https://en.wikipedia.org/?curid=${item.pageid}" target="_blank" 
+                       style="color:#ff79c6; text-decoration:none; font-size:0.75rem; font-weight:bold;">
+                       READ INTEL →
+                    </a>
+                    <button onclick="saveIntel('${item.pageid}', '${item.title.replace(/'/g, "\\'")}')" 
+                            style="background:#3b0a6d; color:white; border:1px solid #8be9fd; padding:6px 12px; border-radius:4px; font-size:0.7rem; cursor:pointer;">
+                            💾 SAVE INTEL
+                    </button>
+                </div>
+            `;
+            listContainer.appendChild(card);
+        });
+    } catch (e) {
+        listContainer.innerHTML = "<p style='color:red; text-align:center;'>System Offline.</p>";
+    }
 }
 
+// ==========================================
+// 2. LOCALSTORAGE SAVE SYSTEM
+// ==========================================
+function saveIntel(id, title) {
+    let archives = JSON.parse(localStorage.getItem("techArchives")) || [];
 
-// ================= SIGNUP =================
-const registerForm = document.getElementById("registerForm");
-
-if (registerForm) {
-
-    registerForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const username = registerForm.querySelector("input[type='text']").value;
-        const email = registerForm.querySelector("input[type='email']").value;
-        const password = document.getElementById("password").value;
-        const confirmPassword = document.getElementById("confirmPassword").value;
-
-        if (password.length < 8) {
-            showMessage("Password must be at least 8 characters.");
-            return;
-        }
-
-        if (password !== confirmPassword) {
-            showMessage("Passwords do not match.");
-            return;
-        }
-
-        const user = {
-            username: username,
-            email: email,
-            password: password
-        };
-
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Automatically log them in
-        window.location.href = "Profile.html";
-    });
-}
-
-
-// ================= MESSAGE FUNCTION =================
-function showMessage(message) {
-    let errorBox = document.getElementById("error");
-
-    if (!errorBox) {
-        errorBox = document.createElement("p");
-        errorBox.id = "error";
-        errorBox.style.color = "red";
-        errorBox.style.marginTop = "10px";
-
-        const form = document.querySelector("form");
-        form.appendChild(errorBox);
+    // Prevent Duplicates
+    if (archives.some(i => i.id === id)) {
+        alert("⚠️ Intelligence already archived.");
+        return;
     }
 
-    errorBox.textContent = message;
-}
-// ================= login Show Password =================
-function toggleLoginPassword() {
-  const password = document.getElementById("loginPassword");
-
-  if (password.type === "password") {
-    password.type = "text";
-  } else {
-    password.type = "password";
-  }
-}
-// =================  Show Password =================
-function toggleBothPasswords() {
-  const password = document.getElementById("password");
-  const confirm = document.getElementById("confirmPassword");
-
-  // Check if currently password type is "password"
-  const isPassword = password.type === "password";
-
-  // Toggle both fields at the same time
-  password.type = isPassword ? "text" : "password";
-  confirm.type = isPassword ? "text" : "password";
-}
-
-// ================= RANDOM JOKE API =================
-
-function getJoke() {
-  const jokeBox = document.getElementById("jokeBox");
-  jokeBox.innerHTML = "<p><em>Thinking of something funny...</em></p>";
-
-  fetch("https://official-joke-api.appspot.com/random_joke")
-    .then(response => response.json())
-    .then(data => {
-      jokeBox.innerHTML = `
-        <p><strong>${data.setup}</strong></p>
-        <p>${data.punchline}</p>
-      `;
-    })
-    .catch(error => {
-      jokeBox.innerHTML = "<p>Comedy is hard. Try again later!</p>";
-      console.error("Joke Error:", error);
+    // Save Data
+    archives.push({ 
+        id: id, 
+        title: title, 
+        date: new Date().toLocaleDateString() 
     });
+    
+    localStorage.setItem("techArchives", JSON.stringify(archives));
+    alert("✅ Successfully archived to Saves.");
 }
 
-function searchPlanet() {
-  const planet = document.getElementById("planetInput").value.trim().toLowerCase();
-  const result = document.getElementById("planetResult");
+// ==========================================
+// 3. DISPLAY SAVED AS STANDING RECTANGLES
+// ==========================================
+function displaySavedItems() {
+    const container = document.getElementById("savedList");
+    const archives = JSON.parse(localStorage.getItem("techArchives")) || [];
+    
+    if (!container) return;
 
-  if (!planet) {
-    result.innerHTML = "<p style='color: #ff4d4d;'>Please enter a destination.</p>";
-    return;
-  }
+    if (archives.length === 0) {
+        container.innerHTML = "<p style='text-align:center; color:#555; margin-top:100px;'>No archived intel found.</p>";
+        return;
+    }
 
-  result.innerHTML = "<p>📡 Contacting deep space probes...</p>";
+    container.innerHTML = ""; // Clear existing content
 
-  // Fetching from NASA's Image Library (Free & Open)
-  fetch(`https://images-api.nasa.gov/search?q=${planet}&media_type=image`)
-    .then(response => {
-      if (!response.ok) throw new Error("Connection lost.");
-      return response.json();
-    })
-    .then(data => {
-      const items = data.collection.items;
-      
-      if (items.length > 0) {
-        // We grab the first result from the NASA database
-        const firstItem = items[0];
-        const imageUrl = firstItem.links[0].href;
-        const title = firstItem.data[0].title;
-        const description = firstItem.data[0].description;
-
-        result.innerHTML = `
-          <div class="planet-card" style="margin-top: 20px; border: 1px solid #00d4ff; padding: 15px; border-radius: 10px; background: rgba(0,0,0,0.7); color: white;">
-            <h4 style="color: #00d4ff; margin-bottom: 10px;">${title}</h4>
-            <img src="${imageUrl}" alt="${title}" style="width: 100%; border-radius: 5px; box-shadow: 0 0 15px rgba(0,212,255,0.3);">
-            <p style="font-size: 0.85rem; line-height: 1.4; margin-top: 10px;">${description.substring(0, 150)}...</p>
-          </div>
+    // Note: Ensure your CSS has #savedList { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+    archives.forEach(item => {
+        const box = document.createElement("div");
+        
+        // Inline styles for the "Standing Box" look
+        box.style.cssText = `
+            width: 180px;
+            height: 240px;
+            background: rgba(59, 10, 109, 0.2);
+            border: 1px solid #3b0a6d;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            color: white;
         `;
-      } else {
-        result.innerHTML = "<p>No records found in the NASA archives.</p>";
-      }
-    })
-    .catch(error => {
-      result.innerHTML = "<p>Static on the line. The 401 ghost is gone, but the server is busy!</p>";
-      console.error(error);
+
+        box.innerHTML = `
+            <div style="font-size:2rem; margin-bottom:10px;">📟</div>
+            <h4 style="font-size:0.9rem; color:#8be9fd; margin-bottom:8px;">${item.title}</h4>
+            <small style="color:#666; font-size:0.7rem; margin-bottom:15px;">Archived: ${item.date}</small>
+            <button onclick="deleteIntel('${item.id}')" 
+                    style="background:#ff4444; border:none; color:white; padding:5px 12px; border-radius:4px; font-size:0.7rem; cursor:pointer;">
+                    REMOVE
+            </button>
+        `;
+        container.appendChild(box);
+    });
+}
+
+// ==========================================
+// 4. MANAGEMENT FUNCTIONS (Delete/Clear)
+// ==========================================
+function deleteIntel(id) {
+    let archives = JSON.parse(localStorage.getItem("techArchives")) || [];
+    archives = archives.filter(i => i.id !== id);
+    localStorage.setItem("techArchives", JSON.stringify(archives));
+    displaySavedItems(); // Refresh the grid
+}
+
+function clearAllSaved() {
+    if (confirm("Permanently wipe all archived intelligence?")) {
+        localStorage.removeItem("techArchives");
+        displaySavedItems();
+    }
+}
+
+// ==========================================
+// 5. LOGIN LOGIC
+// ==========================================
+const loginForm = document.getElementById("loginForm");
+if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const user = loginForm.querySelector("input[type='text']").value;
+        const pass = loginForm.querySelector("input[type='password']").value;
+
+        if (user === "admin" && pass === "admin123") {
+            localStorage.setItem("currentUser", "Admin");
+            window.location.href = "admin.html";
+        } else {
+            const stored = JSON.parse(localStorage.getItem("user"));
+            if (stored && user === stored.username && pass === stored.password) {
+                localStorage.setItem("currentUser", stored.username);
+                window.location.href = "lee.html";
+            } else {
+                alert("Access Denied: Invalid Credentials.");
+            }
+        }
     });
 }
